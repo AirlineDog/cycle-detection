@@ -7,6 +7,7 @@ def f(y):
 
 
 def purge(table, b):
+    """Remove all pairs that j mod b != 0"""
     i = 0
     while i < len(table):
         if table[i][1] % b != 0:
@@ -16,6 +17,7 @@ def purge(table, b):
 
 
 def search_table_y(table, y):
+    """Find y and return smallest j"""
     for value in table:
         if value[0] == y:
             return value[1]
@@ -23,6 +25,7 @@ def search_table_y(table, y):
 
 
 def search_table_j(table, j):
+    """Find j and return smallest y"""
     for value in table:
         if value[1] == j:
             return value[0]
@@ -72,6 +75,7 @@ def recover_cycle(f, y, i, j):
 
 
 def find_f_to_the_nth(n):
+    """Find the nth element of the sequence"""
     kb = search_table_j(table, b * math.floor(n / b))
     more = n % b
     for i in range(more):
