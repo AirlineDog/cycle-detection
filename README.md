@@ -21,3 +21,4 @@ The next step is to find where this cycle is starting, that is the *leader*, and
 
 https://github.com/AirlineDog/cycle-detection/blob/0d117aabf2fd716865b85e324ccf27ee57b9693d/cycle_detection.py#L51-L71
 
+In order to calculate the kth element of the sequence without recalculating all the sequence again and again we use the above table. Specifically, the value `b * ⌊k / b⌋` is the closest value that have been stored in the table. So, we only need to find the pair with `j = b * ⌊k / b⌋`. If *kb* is the first element of this pair, we then apply `k mod b` times the function *f* to *kb*
